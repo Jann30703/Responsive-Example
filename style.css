@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main{
+    width: 1400px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 10px auto;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+/* Product */
+
+.main__product{
+    display: flex;
+    /* align-items: center; */
+    padding: 10px;
+}
+
+.main__product-img{
+    width: 40%;
+    padding-top: 40%;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    border: rgb(148, 210, 240) solid 1px;
+}
+
+.main__product-info{
+    padding: 10px;
+    width: 60%;
+}
+
+/* Column Layout */
+
+.column-layout{
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+}
+
+.column-layout__category{
+    width: 20%;
+    padding: 0 16px;
+}
+
+.column-layout__container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-item{
+    width: 25%;
+    padding: 0 16px;
+}
+
+h2{
+    font-size: 22px;
+}
+
+/* Footer */
+
+.footer__container{
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__container-feature{
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+
+.footer__container-feature:nth-child(1){
+    background-color: rgb(228, 149, 231);
+}
+
+.footer__container-feature:nth-child(2){
+    background-color: rgb(218, 110, 134);
+}
+
+.footer__container-feature:nth-child(3){
+    background-color: rgb(151, 224, 228);
+}
+
+
+/* Mobile and Tablet: width<1024px */
+
+@media only screen and (max-width: 1023px){
+    .main__product{
+        flex-direction: column-reverse;
+    }
+    .main__product-info{
+        width: 100%;
+    }
+    .main__product-desc{
+        display: none;
+    }
+}
+
+/* Mobile: width < 740px */
+
+@media only screen and (max-width: 46.1875em){
+    /* Product */
+    .main__product-img{
+        width: 95%;
+        padding-top: 95%;
+    }
+
+    /* Course */
+    .column-layout__container{
+        width: 100%;
+    }
+    .column-layout__category{
+        display: none;
+    }
+    .container-item{
+        text-align: center;
+        width: 50%;
+    }
+    /* Card Layout */
+    .footer__container{
+        flex-direction: column;
+    }
+}
+
+/* Tablet: width < 1024px */
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    /* Product */
+    .main__product-img{
+        width: 85%;
+        padding-top: 85%;
+    }
+
+    /* Course */
+    .container-item{
+        width: 33.333%;
+    }
+}
