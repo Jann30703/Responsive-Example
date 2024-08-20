@@ -32,7 +32,7 @@ body{
 }
 .nav__list{
     display: flex;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 .nav__list li{
